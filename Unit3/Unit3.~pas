@@ -1,0 +1,45 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, MemDS, Grids, DBGrids, Unit1, UniDacVcl, ExtCtrls, DBCtrls;
+
+type
+  TForm3 = class(TForm)
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    DBNavigator1: TDBNavigator;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+
+{$R *.dfm}
+
+procedure TForm3.FormShow(Sender: TObject);
+begin
+  Form1.UniQuery1.SQL.Text := 'SELECT * FROM users'; //запрос на выборку всех данных из таблицы users
+  Form1.UniQuery1.Open; //открытие запроса
+  DBGrid1.DataSource := DataSource1; //установка источника данных для DBGrid1
+end;
+
+
+
+
+procedure TForm3.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Form1.Close;
+end;
+
+end.
