@@ -53,8 +53,8 @@ begin
   email := EditEmail.Text;
   password := EditPassword.Text;
 
-  UniConnection1.Server := '7.tcp.eu.ngrok.io';  //сервер запущен у меня на компе. Если ошибка - значит комп я выключил))
-  UniConnection1.Port := 14298;
+  UniConnection1.Server := '2.tcp.eu.ngrok.io';  //Г±ГҐГ°ГўГҐГ° Г§Г ГЇГіГ№ГҐГ­ Гі Г¬ГҐГ­Гї Г­Г  ГЄГ®Г¬ГЇГҐ. Г…Г±Г«ГЁ Г®ГёГЁГЎГЄГ  - Г§Г­Г Г·ГЁГІ ГЄГ®Г¬ГЇ Гї ГўГ»ГЄГ«ГѕГ·ГЁГ«))
+  UniConnection1.Port := 14704;
   UniConnection1.Username := 'user1';
   UniConnection1.Password := 'lapicus';
   UniConnection1.Database := 'postgres';
